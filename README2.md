@@ -15,7 +15,10 @@ STACK
 HOW TO RUN LOCALLY
 
 1. Copy `.env.local.example` to `.env.local`
-2. Set `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+2. Set `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` and go to "supabase.sql" file in the project copy and paste the instructions in you supabase SQL Editor. 
+
+note: And after creation of a post try refreshing the page.
+
 3. Install dependencies:
    ```bash
    npm install
