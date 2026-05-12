@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { createSupabase } from '../../../lib/supabase';
 
+// Post detail page is server rendered on demand.
+// It fetches a single post by id and renders the full content.
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 

@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { createSupabase } from '../lib/supabase';
 
+// Force dynamic rendering so new posts appear immediately
+// after creation and the list is not cached.
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
@@ -8,6 +10,7 @@ const formatDate = (value) => new Date(value).toLocaleString();
 const truncate = (text, length = 140) => text.length > length ? `${text.slice(0, length)}...` : text;
 
 export default async function HomePage() {
+  // Fetch all posts from Supabase in descending order
   const supabase = createSupabase();
   const { data: posts, error } = await supabase
     .from('posts')

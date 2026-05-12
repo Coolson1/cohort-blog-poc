@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { createSupabase } from '../../lib/supabase';
 
+// Client component for creating a new blog post.
+// Uses Supabase insert and redirects back to the home page.
 export default function NewPostPage() {
   const router = useRouter();
   const [author, setAuthor] = useState('');
